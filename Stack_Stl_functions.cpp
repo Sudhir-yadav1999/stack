@@ -81,3 +81,83 @@ int main()
 	
 	return 0;
 }
+
+
+========================================================
+	
+#include <bits/stdc++.h>
+using namespace std;
+
+void showtrack(stack<string> s)
+{
+    while(!s.empty())
+    {
+        cout<<"The element is :: "<<s.top()<<endl;
+        s.pop();
+        
+    }
+}
+
+int main()
+{
+	stack<string> s;
+    
+    s.push("Hello");
+    s.push("How ar u");
+    s.push("Love you");
+	
+	showtrack(s);
+	return 0;
+}
+===================================
+
+----------
+Palindrome
+----------
+#include <bits/stdc++.h>
+using namespace std;
+
+void showtrack(stack<char> s)
+{
+    while(!s.empty())
+    {
+        cout<<"The element is :: "<<s.top()<<endl;
+        s.pop();
+        
+    }
+}
+
+int main()
+{
+    stack<char> s;
+    string word;
+    
+    cout<<"Enter the word you want to check palindrome for :;"<<endl;
+    cin>>word;
+    for(int i=0;i<word.size();i++)
+    {
+        s.push(word[i]);
+    }
+    
+    string rev="";
+    
+    while(!s.empty())
+    {
+     rev +=s.top();
+     s.pop();
+    }
+    
+    if(rev == word)
+    {
+        cout<<"The word is a palindrome :"<<endl;
+        
+    }
+    else 
+    {
+        cout<<"It is not a palindrome :"<<endl;
+    }
+    
+	showtrack(s);
+	
+	return 0;
+}
